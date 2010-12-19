@@ -1,0 +1,92 @@
+<!doctype html>  
+<html lang="en" class="no-js">
+  
+  <head>
+    <meta charset="utf-8">
+
+    <title>SmartMove | Try to move smartly!</title>
+    <meta name="description" content="This app, developped in Eurecom, France, aims at moving greener. Select your move, and make a smart choice">
+    <meta name="author" content="Nicolas girault, Mathilde Caron, Arnaud Brousseau">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+    <script src="js/modernizr-1.6.min.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>SmartMove</h1>
+    </header>
+    <aside>
+      <section>
+        <p>
+          <em>1</em>
+          Choose your point of
+          departure. It can be
+          anything, including your
+          current location.
+          Then, say where you
+          want to move to, and
+          click the main button
+          for the magic to happen!
+        </p>
+        <p>
+          <em>2</em>
+          Now, explore the 
+          possibilitues to move.
+          Check the time, the 
+          instructions, and the CO<sub>2</sub>
+          produced by the move
+          you are planning.
+          Analyse, (try to) be green,
+          and move smartly!
+        </p>
+        <h1>
+          <span>
+          What<br/> 
+          are you<br/> 
+          waiting <br/>
+          for<br/> 
+          ?<br/>
+          </span>
+        </h1>
+        <h2>
+          GO!<br/>
+          &darr;
+        </h2> 
+      </section>
+    </aside>    
+    <div id="main">
+      <form method="POST" action="#">
+        <section>
+          <label for="from">From: </label>
+          <input type="text" id="from" value="Your current location"/>
+        </section>  
+        <section>
+          <label for="to">To:</label>
+          <input type="text" id="to" value="Where d'you wanna go?" />
+        </section>
+        <input type="button" id="submit" value="Try it, and move smartly!" />
+      </form>
+    </div>
+    
+    <footer>
+      <p>Copyright &copy; 2011, SmartMove Corp</p>
+    </footer>
+  
+  <!-- JS at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
+  
+  <script src="js/script.js"></script>
+
+</body>
+</html>
+

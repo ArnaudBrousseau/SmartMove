@@ -1,0 +1,231 @@
+/*
+Stylesheet of SmartMove.
+_________________________________________________
+*************************************************
+  This contains : 
+  1. a CSS reset, to have cross-browser consistency
+  2. a general set of style
+  3. the main styles for SmartMove
+  4. some adjustments for mobile devices
+_________________________________________________
+************************************************/
+
+
+/********** 
+* CSS Reset - based on html5doctor.com Reset Stylesheet
+***********/
+
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote,
+pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, 
+strong, sub, sup, var,b, i,dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend,table, caption, tbody, tfoot, thead, tr, th, td, article, aside, 
+canvas, details, figcaption, figure,footer, header, hgroup, menu, nav, 
+section, summary, time, mark, audio, video {
+  margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;
+}                  
+
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav,
+section { display:block; }
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+
+
+/**********
+* Set of basic styles
+**********/
+
+
+/* font style, with the help from the YUI Library */
+body { font:13px/1.231 sans-serif; }
+select, input, textarea, button { font:99% sans-serif; }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+body, select, input, textarea { color: #444; font-family: Arial, serif; }  
+h1,h2,h3,h4,h5,h6 { font-weight: bold; } 
+html { overflow-y: scroll; } /* Scrollbar forced */
+
+a:hover, a:active { outline: none; }
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
+
+ul, ol { margin-left: 1.8em; }
+ol { list-style-type: decimal; }
+nav ul, nav li { margin: 0; } 
+
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+
+td, td img { vertical-align: top; } 
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+pre { padding: 15px; white-space: pre-line; }
+ 
+textarea { overflow: auto; }
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+button, input, select, textarea { margin: 0; }
+
+/* Hot pink when selecting text, and no text-shadow */
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
+
+/* for image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+
+/**********
+* Let's style smartMove! 
+**********/
+
+body { background: url("../img/pattern.png") top left;}
+header{margin-top: 18px;}
+header h1{ 
+  width: 450px; height: 130px; 
+  text-indent: -666em; overflow: hidden; 
+  background: transparent url("../img/logo.png") top left no-repeat;}
+
+aside { 
+  height: 250px; 
+  background-color: rgba(255,255,255,0.3); 
+  border-top: 2px #498F92 solid; border-bottom: 2px #498F92 solid; 
+  margin: 18px 0
+}
+aside section { width: 960px; margin: 0 auto; padding: 35px 0; position: relative;}
+aside p {
+  height: 180px; width: 200px;
+  float: left;
+  padding-left: 120px;
+  padding-right: 30px;
+  position: relative;
+  font-size: 16px; line-height: 1.5em;
+}
+aside p:first-child{border-right: 2px solid #498F92;}
+aside p:last-child{border-left: 1px solid #fff;}
+aside em { 
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  -moz-border-radius: 37px; border-radius: 37px; 
+  background-color: #fff; border: 1px #77A4A6 solid; 
+  width: 75px; height: 75px; 
+  font-size: 58px; text-indent: 18px; line-height: 1.3em;
+}
+aside h1{
+  position: absolute;
+  top: 35px;
+  right: 25px;
+  -moz-border-radius: 90px; border-radius: 90px;
+  background-color: #fff; border: 1px #77A4A6 solid;
+  width: 180px; height: 180px;
+}
+aside h1 span{
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  -moz-border-radius: 80px; border-radius: 80px; 
+  background-color: #fff; 
+  width: 160px; height: 160px; 
+  font-size: 26px; text-align: center;
+}
+aside h2{
+  position: absolute;
+  top: 250px;
+  left: 20px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  border: 2px #498F92 solid;
+  background-color: #6BBDBF;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 24px;
+  text-align: center;
+}
+
+#main { width: 960px; margin: 52px auto; }
+
+form {position: relative; width: 920px; height: 300px;margin: 0 auto; margin-top: 130px;}
+form section {float: left; width: 460px;}
+label{font-size: 24px; display:block;}
+input{ 
+  font-size: 18px; 
+  line-height: 27px; 
+  color:#77A4A6; 
+  width: 400px; height: 32px; 
+  border: 1px solid #77A4A6; 
+  -moz-border-radius: 3px; border-radius: 3px; 
+  padding: 6px; 7px; 
+}
+#submit {
+  color: #F94D13; 
+  font-size: 22px; 
+  text-shadow: 0 0 -1px #fff; 
+  position:absolute;
+  top: 105px;
+  left: 290px;
+  width: 300px; height: 50px; 
+  display: block;
+  background-image: -moz-linear-gradient(top, #ffffff, #71A3A5);
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #71A3A5),color-stop(1, #ffffff));
+}
+#submit:hover{
+  background-image: -moz-linear-gradient(top, #ffffff,#498F92);
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #498F92),color-stop(1, #ffffff));
+}
+#submit:active{
+  background-image: -moz-linear-gradient(top,#71A3A5, #ffffff);
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #ffffff),color-stop(1, #71A3A5));
+}
+
+footer{
+  border-top: 2px solid #fff;
+  padding: 18px 0;
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  font-size: 16px;
+  background-color: #F94D13;
+}
+/**********
+* Adjustments: CSS Media queries for responsive design 
+***********/
+
+@media all and (orientation:portrait) { 
+  /* Style adjustments for portrait mode goes here */
+  
+}
+
+@media all and (orientation:landscape) { 
+  /* When mobile devices are in landscape mode */
+  
+}
+
+@media screen and (max-device-width: 480px) {
+  /* Adjustment for iPhone */
+
+}
+
