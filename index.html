@@ -38,7 +38,7 @@
         <p>
           <em>2</em>
           Now, explore the 
-          possibilitues to move.
+          possibilities to move.
           Check the time, the 
           instructions, and the CO<sub>2</sub>
           produced by the move
@@ -61,19 +61,49 @@
         </h2> 
       </section>
     </aside>    
-    <div id="main">
+    <section id="main">
       <form method="POST" action="#">
-        <section>
+        <section class="departure">
           <label for="from">From: </label>
           <input type="text" id="from" value="Your current location"/>
         </section>  
-        <section>
+        <section class="arrival">
           <label for="to">To:</label>
           <input type="text" id="to" value="Where d'you wanna go?" />
         </section>
         <input type="button" id="submit" value="Try it, and move smartly!" />
       </form>
-    </div>
+      <section id="content" class="foot">
+        <nav>
+          <ul>
+            <li class="active"><a href="#foot">On foot</a></li>
+            <li><a href="#car">By car</a></li>
+            <li><a href="#bus">By bus</a></li>
+          </ul>
+        </nav>
+        <div id="google-map">
+          <!-- here goes the main map -->
+          Click in the box to see Honolulu (Hawai, awesome)
+        </div>
+        <aside>
+          <ul>
+            <li class="very-good">
+              <strong>0g</strong> of CO<sub>2</sub> emission
+            </li>
+            <li class="bad">
+              <strong>1h30</strong> of travelling time
+            </li>
+            <li class="Instructions">
+              <strong>Instructions</strong><br/>
+              - Be careful with cars<br/>
+              - Respect (even road!) signs<br/>
+              - Enjoy your fresh air taking!<br/>
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+    </section>
     
     <footer>
       <p>Copyright &copy; 2011, SmartMove Corp</p>
@@ -85,6 +115,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
   
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script src="js/script.js"></script>
 
 </body>

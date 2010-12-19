@@ -100,7 +100,7 @@ button, input, select, textarea { margin: 0; }
 * Let's style smartMove! 
 **********/
 
-body { background: url("../img/pattern.png") top left;}
+body { background: #6FD3D8 url("../img/pattern.png") top left;}
 header{margin-top: 18px;}
 header h1{ 
   width: 450px; height: 130px; 
@@ -117,6 +117,7 @@ aside section { width: 960px; margin: 0 auto; padding: 35px 0; position: relativ
 aside p {
   height: 180px; width: 200px;
   float: left;
+  text-shadow: 0px 1px 0px #DFFDFF;
   padding-left: 120px;
   padding-right: 30px;
   position: relative;
@@ -168,9 +169,12 @@ aside h2{
 
 #main { width: 960px; margin: 52px auto; }
 
-form {position: relative; width: 920px; height: 300px;margin: 0 auto; margin-top: 130px;}
-form section {float: left; width: 460px;}
-label{font-size: 24px; display:block;}
+form {position: relative; width: 920px; height: 235px;margin: 0 auto; margin-top: 130px;}
+
+form section {width: 410px;}
+form section.departure { float: left; }
+form section.arrival { float: right; }
+label{font-size: 24px; display:block; padding-left: 8px;}
 input{ 
   font-size: 18px; 
   line-height: 27px; 
@@ -178,15 +182,15 @@ input{
   width: 400px; height: 32px; 
   border: 1px solid #77A4A6; 
   -moz-border-radius: 3px; border-radius: 3px; 
-  padding: 6px; 7px; 
+  padding: 6px 7px; 
 }
 #submit {
   color: #F94D13; 
   font-size: 22px; 
-  text-shadow: 0 0 -1px #fff; 
+  text-shadow: 0 -1px 0px #fff; 
   position:absolute;
   top: 105px;
-  left: 290px;
+  left: 320px;
   width: 300px; height: 50px; 
   display: block;
   background-image: -moz-linear-gradient(top, #ffffff, #71A3A5);
@@ -200,6 +204,61 @@ input{
   background-image: -moz-linear-gradient(top,#71A3A5, #ffffff);
   background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #ffffff),color-stop(1, #71A3A5));
 }
+
+/* Let's go for the main content */
+
+#content { 
+  background-color: #fff;
+  border: 1px #71A3A5 solid;
+  -moz-border-radius: 5px; border-radius: 5px;
+  width: 920px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+#content nav { position: absolute; top: -30px; left: 20px; }
+#content nav li { 
+  display: inline; 
+  float:left; 
+  background-color: #fff; 
+  border: 1px #71A3A5 solid;
+  -moz-border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 0 0;
+  padding: 4px 8px;
+  margin-right:2px;
+  font-size: 16px;
+}
+#content nav li.active{ z-index: 99; border-bottom: none; margin-top: -9px; font-size: 24px; font-weight: bold;}
+#content nav li.active a{ text-decoration: none;}
+
+#content #google-map{
+  width: 560px;
+  height: 360px;
+  margin: 20px;
+  background-color: #ddd;
+  border: 1px #999 solid;
+}
+#content aside{
+  border:none;
+  border-left: 2px #71A3A5 solid;
+  padding: 1px 20px;
+  width: 280px;
+  height: 360px;
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+#content aside ul { list-style-type: none; margin-left: 0;}
+#content aside li{ border-bottom: 1px dashed #71A3A5; padding: 16px 0; font-size: 16px; }
+#content aside li strong { font-size: 2em; }
+
+/* feedback by color code for times and pollutions */
+#content aside li.very-good { color: #17DEEE } /* blue */
+#content aside li.good { color: #92EA1B } /* lime green */
+#content aside li.neutral { color: #F5BE16 } /* yellow */
+#content aside li.bad { color: #F94D13 } /* oranged red */
+#content aside li.very-bad { color: #E3240F } /* red */
 
 footer{
   border-top: 2px solid #fff;
