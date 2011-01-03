@@ -1,6 +1,29 @@
-Hello!
+   ____________________________________________________
+   ****************************************************
+   _____                      __  __  ___              
+  / ___/____ ___  ____ ______/ /_/  |/  /___ _   _____ 
+  \__ \/ __ `__ \/ __ `/ ___/ __/ /|_/ / __ \ | / / _ \
+ ___/ / / / / / / /_/ / /  / /_/ /  / / /_/ / |/ /  __/
+/____/_/ /_/ /_/\__,_/_/   \__/_/  /_/\____/|___/\___/ 
+                                                       
+  _____________________________________________________
+  *****************************************************
 
-I'm glad the SmartMove project is finally starting.
-Let's let the HTML5 & CSS3 awesomeness speak for themselves!!
+  Hello!
 
-Cheers.
+  The SmartMove project has finally started.
+  The main mockup of the project is over. Now will 
+  begin the fun part: building the interactin is JS.
+  
+  ------
+
+  To be done: 
+  - Implementation of the form interaction
+  - Using the Google Map JS API to display the maps 
+  and the directions
+  - Challenge: taking into account bus stations
+  - Taking into account the fuel used by your car
+  (this means a variable with which you can interact)
+  - That's all folks!
+  
+  Cheers!
