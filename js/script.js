@@ -20,8 +20,13 @@ function initialize() {
   directionsDisplay.setMap(map);
 }
 
-function calcRoute() {
-alert(document.getElementById("from").value+' '+document.getElementById("to").value);
+function calcRoute(e) {
+    //To clear the instructions -- should we activate it ?
+	//document.getElementsByTagName("aside")[0].style.display="none";
+	
+	//To go to top of the page
+	//window.scrollTo(0,0);
+	
     var start = document.getElementById("from").value;
     var end = document.getElementById("to").value;
     var request = {
@@ -34,4 +39,7 @@ alert(document.getElementById("from").value+' '+document.getElementById("to").va
         directionsDisplay.setDirections(response);
       }
     });
+	e.preventDefault();
   }
+ 
+ document.getElementById("form").addEventListener("submit", calcRoute, false);
