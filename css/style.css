@@ -260,6 +260,15 @@ input{
 #content aside li.bad { color: #F94D13 } /* oranged red */
 #content aside li.very-bad { color: #E3240F } /* red */
 
+
+#about{
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+#about h1{margin: 2em 0;padding-bottom: 0.5em; border-bottom: 2px #444 solid; font-size: 22px;text-align:center;}
+#about p{padding: 0 2em;}
+#about ul{padding: 0 3em;}
 footer{
   border-top: 2px solid #fff;
   padding: 18px 0;
@@ -269,6 +278,8 @@ footer{
   font-size: 16px;
   background-color: #F94D13;
 }
+footer a{color: #fff !important;}
+footer a:hover{text-decoration: none;}
 /**********
 * Adjustments: CSS Media queries for responsive design 
 ***********/
