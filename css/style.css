@@ -51,7 +51,7 @@ input, select { vertical-align:middle; }
 
 
 /**********
-* Set of basic styles
+* Set of basic styles - adapted from html5BoilerPlate
 **********/
 
 
@@ -280,6 +280,7 @@ footer{
 }
 footer a{color: #fff !important;}
 footer a:hover{text-decoration: none;}
+footer .badge{ position:fixed; top: 10px; right: 10px}
 /**********
 * Adjustments: CSS Media queries for responsive design 
 ***********/
