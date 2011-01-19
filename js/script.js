@@ -2,6 +2,25 @@
  * SmartMove scripting
  ***********************/
 
+/*
+ * Placeholder behaviour simulation
+ */
+var defaultTo = 'Where d\'you wanna go?';
+var defaultFrom = 'Your current location';
+
+/* When the user focuses on the field */
+function placeholderIn(e){
+  if(this.value == defaultTo || this.value == defaultFrom){
+    this.value = '';
+  }
+}
+/* When the user quit the field (blur) */
+function placeholderOut(e){
+  if(this.value == ''){
+    if(this.getAttribute('id') == 'to'){ this.value = defaultTo; }
+    if(this.getAttribute('id') == 'from'){ this.value = defaultFrom; }
+  }
+}
 
 /*
  * Geolocation stuff
@@ -12,6 +31,7 @@ var directionsService = new google.maps.DirectionsService();
 var map;
 var currentLatLng;
 
+/* When the page load, print a map centered on Honolulu. Great! */
 function initialize() {
   var myLatlng = new google.maps.LatLng(21.306944,-157.858333);
   var myOptions = {
@@ -20,20 +40,21 @@ function initialize() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
   map = new google.maps.Map(document.getElementById("google-map"), myOptions);
-  directionsDisplay = new google.maps.DirectionsRenderer();//pour le chemin
+  directionsDisplay = new google.maps.DirectionsRenderer();
   directionsDisplay.setMap(map);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(getLatLng);
     }
 }
 
+/* Function to be passed to the browser's geolocation feature */
 function getLatLng(position){
-  //Function to be passed to the browser's geolocation feature
   var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
   currentLatLng = latLng;
   return;
 }
 
+/* Function to print the map */
 function calcRoute(e) {
 
   var request = null;
@@ -57,9 +78,6 @@ function calcRoute(e) {
   }
 
   directionsService.route(request, function(response, status) {
-    /* BUG !
-     * alert('In the callback'); //Page refreshes before being alerted :(
-     */
     if (status == google.maps.DirectionsStatus.OK) {
       directionsDisplay.setDirections(response);
     }
@@ -68,15 +86,9 @@ function calcRoute(e) {
   e.preventDefault();
   return false;
 }
- 
-document.getElementById("form").addEventListener("submit", calcRoute, false);
 
-/*
- * Working tabs
- */
+/* Adjusts the data on the right column according to the mean of the transport */
 function setData(meanOfTransport){
-  //Adjusts the data on the right column according to the mean of the transport
-  // very-good:good:neutral:bad:very-bad
 
   var instructions = document.getElementById('instructions');
   var base = "<strong>Instructions</strong><br/>";
@@ -131,6 +143,7 @@ function setData(meanOfTransport){
   }
 }
 
+/* Function that actually does the switch of tabs */
 function toggle(e){
   if(this.getAttribute('class') == "active"){alert('You are already here');}
   else{
@@ -141,6 +154,16 @@ function toggle(e){
     setData(this.innerHTML);
   }
 }
+
+/* Event binding for placeholders */
+document.getElementById('from').addEventListener('focus', placeholderIn, false);
+document.getElementById('from').addEventListener('blur', placeholderOut, false);
+
+document.getElementById('to').addEventListener('focus', placeholderIn, false);
+document.getElementById('to').addEventListener('blur', placeholderOut, false);
+
+/* Event binding for gealocation */
+document.getElementById("form").addEventListener("submit", calcRoute, false);
 for(var i=0;i<3;i++){
   document.getElementById('content').getElementsByTagName('li')[i].addEventListener('click',toggle,false);
 }
