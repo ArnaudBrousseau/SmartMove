@@ -162,7 +162,8 @@ document.getElementById('from').addEventListener('blur', placeholderOut, false);
 document.getElementById('to').addEventListener('focus', placeholderIn, false);
 document.getElementById('to').addEventListener('blur', placeholderOut, false);
 
-/* Event binding for gealocation */
+/* Event binding for geolocation */
+window.onload = function(){initialize();}
 document.getElementById("form").addEventListener("submit", calcRoute, false);
 for(var i=0;i<3;i++){
   document.getElementById('content').getElementsByTagName('li')[i].addEventListener('click',toggle,false);

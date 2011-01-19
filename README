@@ -12,18 +12,8 @@
   Hello!
 
   The SmartMove project has finally started.
-  The main mockup of the project is over. Now will 
-  begin the fun part: building the interactin is JS.
-  
+  The main mockup of the project is over. 
   ------
 
-  To be done: 
-  - Implementation of the form interaction
-  - Using the Google Map JS API to display the maps 
-  and the directions
-  - Challenge: taking into account bus stations
-  - Taking into account the fuel used by your car
-  (this means a variable with which you can interact)
-  - That's all folks!
-  
-  Cheers!
+  Feel free to look at the "about" page if you feel
+  interested by SmartMove!
