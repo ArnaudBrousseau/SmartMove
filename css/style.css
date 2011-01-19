@@ -1,5 +1,5 @@
 /*
-Stylesheet of SmartMove.
+Stylesheet of SmartMove. Contains nice tricks from HTML5BoilerPlate.
 _________________________________________________
 *************************************************
   This contains : 
@@ -281,22 +281,3 @@ footer{
 footer a{color: #fff !important;}
 footer a:hover{text-decoration: none;}
 footer .badge{ position:fixed; top: 10px; right: 10px}
-/**********
-* Adjustments: CSS Media queries for responsive design 
-***********/
-
-@media all and (orientation:portrait) { 
-  /* Style adjustments for portrait mode goes here */
-  
-}
-
-@media all and (orientation:landscape) { 
-  /* When mobile devices are in landscape mode */
-  
-}
-
-@media screen and (max-device-width: 480px) {
-  /* Adjustment for iPhone */
-
-}
-
