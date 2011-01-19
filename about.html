@@ -1,4 +1,4 @@
-<!doctype html>  
+<!doctype html>
 <html lang="en" class="no-js">
 
   <head>
@@ -6,7 +6,7 @@
 
     <title>SmartMove | About us</title>
     <meta name="description" content="This app, developped in Eurecom, France, aims at moving greener. Select your move, and make a smart choice">
-    <meta name="author" content="Nicolas girault, Mathilde Caron, Arnaud Brousseau">
+    <meta name="author" content="Nicolas Girault, Mathilde Caron, Arnaud Brousseau">
 
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -26,8 +26,16 @@
       <article>
         <h1>What should be SmartMove ?</h1>
         <p>
-          SmartMove is an app which enables people to move from one place to another.<br/>
-          Blabla<br/>
+          SmartMove is an application which enables people to move from one place to another.
+Many others sites as the SNCF's one in France provide this kind of service. However, they sometimes tend to be very difficult to use, and to find...<br/>
+Here is our innovation: a simple interface where people of every age and abilities can easily search for the information they need. <br/>
+How to use it? You type your departure in the first input text, and your finak destination in the next one. You can also put nothing in the
+first input text and accept that Google determines your current position: in this way, you are searching for a way from where you are to where you want to go.
+Then, if you click on the submit button, you can see in the google map the way in color from the departure to the arrival.<br/>
+In the tabs above the map, you can choose the way to go: by bus, by car and on foot. On the right side, we can see the information about the consommation, the
+time it takes to travel.
+
+
         </p>
       </article>
 
@@ -49,7 +57,16 @@
       <article>
         <h1>What does Smartmove does so far ?</h1>
         <p>
-          Blabla, to complete.
+         In the coding level, we used google API (Application Programming Interface) for the geolocation and the current geolocation.
+         </p>
+      </article>
+
+
+ <article>
+        <h1>The limits we encountered</h1>
+        <p>
+         When we let the current location at its default value, once we submit it, the javascript doesn't have time to execute as the page reloads itself.<br/>
+So the map doesn't display our current location even if we accept to give it ti google. However once we put the part of code in the initialisation function in the javascript, it works then.
         </p>
       </article>
 
@@ -62,7 +79,6 @@
     <footer>
       <p>Copyright &copy; 2011, SmartMove Corp</p>
     </footer>
-  
+
 </body>
 </html>
-
