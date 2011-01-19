@@ -22,6 +22,9 @@ function initialize() {
   map = new google.maps.Map(document.getElementById("google-map"), myOptions);
   directionsDisplay = new google.maps.DirectionsRenderer();//pour le chemin
   directionsDisplay.setMap(map);
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getLatLng);
+    }
 }
 
 function getLatLng(position){
@@ -38,9 +41,7 @@ function calcRoute(e) {
   var end = document.getElementById("to").value;
 
   if(start == "Your current location"){
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(getLatLng);
-    }
+
     request = {
       origin:currentLatLng,
       destination:end,
